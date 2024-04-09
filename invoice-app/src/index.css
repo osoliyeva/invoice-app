@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "League Spartan";
+    src:
+      url("./fonts/LeagueSpartan-Medium.woff2") format("woff2"),
+      url("./fonts/LeagueSpartan-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "League Spartan";
+    src:
+      url("./fonts/LeagueSpartan-Bold.woff2") format("woff2"),
+      url("./fonts/LeagueSpartan-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "League Spartan";
+    src:
+      url("./fonts/LeagueSpartan-SemiBold.woff2") format("woff2"),
+      url("./fonts/LeagueSpartan-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  html {
+    @apply h-full scroll-smooth;
+  }
+
+  body {
+    @apply h-full  font-spartan dark:bg-darck-bg;
+  }
+
+  #root {
+    @apply h-full;
+  }
+
+  .remove-arrow::-webkit-inner-spin-button,
+  .remove-arrow::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .remove-arrow {
+    -moz-appearance: textfield;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+@layer components {
+  .show {
+    @apply !pointer-events-auto !opacity-100;
+  }
+  .full-input {
+    @apply input input-bordered mb-[25px] w-full  hover:text-rich-black;
+  }
+  /* buttons */
+  .button-delete {
+    @apply items-center rounded-full bg-persian-red pb-[15px] pl-[24px] pr-[22px] pt-[18px];
+  }
+
+  .button-delete:hover {
+    @apply pointer-events-auto bg-[#FF9797];
+  }
+
+  .new-invoice-button {
+    @apply items-center rounded-full bg-purplish-blue pb-2 pl-2 pr-4 pt-2 font-spartan text-[15px] text-white;
+  }
+
+  .new-invoice-button:hover {
+    @apply pointer-events-auto bg-lavender-blue;
+  }
+
+  .paid-button {
+    @apply items-center rounded-full bg-purplish-blue pb-[15px] pl-[24px] pr-[22px] pt-[18px];
+  }
+
+  .paid-button:hover {
+    @apply pointer-events-auto bg-lavender-blue;
+  }
+
+  .edit-button-black {
+    @apply items-center rounded-full bg-edit-button-black pb-[15px] pl-[24px] pr-[22px] pt-[18px] font-spartan text-white;
+  }
+
+  .edit-button-black:hover {
+    @apply pointer-events-auto bg-white text-alice-blue;
+  }
+
+  .edit-button-white {
+    @apply items-center rounded-full bg-[#F9FAFE] pb-[15px] pl-[24px] pr-[22px] pt-[18px] dark:bg-edit-button-black;
+  }
+
+  .edit-button-white:hover {
+    @apply pointer-events-auto bg-alice-blue;
+  }
+
+  .draft-button {
+    @apply items-center rounded-full bg-navbar-cl pb-[15px] pl-[24px] pr-[22px] pt-[18px] font-spartan text-alice-blue;
+  }
+
+  .draft-button:hover {
+    @apply pointer-events-auto bg-raisin-black;
+  }
+
+  .draft-text-button {
+    @apply items-center rounded-full bg-navbar-cl pb-[15px] pl-[24px] pr-[22px] pt-[18px]  font-spartan text-manatee;
+  }
+
+  .draft-text-button:hover {
+    @apply pointer-events-auto bg-raisin-black;
+  }
+
+  .add-item-button {
+    @apply h-12 w-full items-center rounded-full bg-add-new-btn text-light-slate-blue;
+  }
+
+  .add-item-button:hover {
+    @apply pointer-events-auto bg-alice-blue;
+  }
+
+  /* typography classes */
+  .city_code_country {
+    @apply input input-bordered h-12 w-[152px] hover:input-primary hover:text-rich-black;
+  }
+  .form-span {
+    @apply mb-[9px] font-spartan text-xs font-medium  capitalize tracking-[-0.5px] text-light-slate-blue;
+  }
+  .from-to {
+    @apply font-spartan text-base font-bold capitalize tracking-[-0.5px] text-purplish-blue;
+  }
+  .light-blue-type1 {
+    @apply font-spartan text-[13px] font-medium leading-[18px] -tracking-[0.1px] text-light-slate-blue dark:text-alice-blue;
+  }
+  .light-blue-type2 {
+    @apply font-spartan text-[13px] font-medium leading-[15px] -tracking-[0.1px] text-light-slate-blue dark:text-alice-blue;
+  }
+  .light-blue-type3 {
+    @apply font-spartan text-[13px] font-bold leading-[18px] -tracking-[0.1px] text-light-slate-blue dark:text-alice-blue;
+  }
+  .light-blue-type4 {
+    @apply font-spartan text-[15px] font-medium leading-[15px] -tracking-[0.1px] text-light-slate-blue dark:text-alice-blue;
+  }
+  .light-blue-type5 {
+    @apply font-spartan text-[15px] font-bold leading-[15px] -tracking-[0.1px] text-light-slate-blue dark:text-alice-blue;
+  }
+  .light-blue-type6 {
+    @apply font-spartan text-[18px] font-bold leading-[32px] -tracking-[0.38px] text-light-slate-blue dark:text-alice-blue;
+  }
+  .rich-black-type1 {
+    @apply font-spartan text-[15px] font-bold leading-[24px] -tracking-[0.25px] text-rich-black dark:text-white;
+  }
+  .rich-black-type2 {
+    @apply font-spartan text-[15px] font-bold leading-[15px] -tracking-[0.25px] text-rich-black dark:text-white;
+  }
+  .rich-black-type3 {
+    @apply font-spartan text-[15px] font-bold leading-[20px] -tracking-[0.25px] text-rich-black dark:text-white;
+  }
+  .white-type1 {
+    @apply font-spartan text-[15px] font-bold leading-[15px] -tracking-[0.25px] text-white;
+  }
+  .white-type2 {
+    @apply font-spartan text-[24px] font-bold leading-[32px] -tracking-[0.5px] text-white;
+  }
+  .white-type3 {
+    @apply font-spartan text-[13px] font-bold leading-[18px] -tracking-[0.1px] text-white;
+  }
+  .no-invoice {
+    @apply font-spartan text-xs font-medium leading-4 tracking-widest text-manatee dark:text-white;
+  }
+
+  /* list item input hover */
+  .inhover:hover {
+    @apply input-error;
+  }
+}
